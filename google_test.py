@@ -7,4 +7,4 @@ def test_positive_google(browser_open):
 
 def test_negative_google(browser_open):
     browser.element('[name=q]').should(be.blank).type('dfkdfldlkfjdlk;gjdl;kg').press_enter()
-    browser.element('[id=search]').should(have.text('По запросу dfkdfldlkfjdlk;gjdl;kg ничего не найдено.'))
+    browser.element('[id=res]').should(have.text('Your search - dfkdfldlkfjdlk;gjdl;kg - did not match any documents.'))
